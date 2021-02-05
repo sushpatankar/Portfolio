@@ -1,11 +1,11 @@
 $primary-color: #444;
-$secondary-color: #7cfc00;
+$secondary-color: #eece1a;
 $show-home-image: true;
-$home-image: url(../img/b2.jpg);
-$background-opacity: 0.7;
+$home-image: url(../img/b3.jpg);
+$background-opacity: 0.5;
 
 @mixin easeOut {
-  transition: color 1s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 @mixin background {
@@ -26,5 +26,39 @@ $background-opacity: 0.7;
         background: rgba($primary-color, $background-opacity);
       }
     }
+  }
+}
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }

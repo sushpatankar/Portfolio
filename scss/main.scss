@@ -11,8 +11,7 @@ body {
   color: white;
   height: 100%;
   margin: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -24,11 +23,11 @@ h3 {
   margin: 0;
   font-weight: 400;
   &.lg-heading {
-    font-size: 8rem;
+    font-size: 5rem;
   }
   &.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0.5rem;
     background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
   }
 }
