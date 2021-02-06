@@ -176,13 +176,58 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "skill1 skill2 skill3" "skill4 skill5 skill6" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
     border: #eece1a 3px solid; }
+  .about-info .skills {
+    grid-area: skills;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px; }
+  .about-info .skill-name {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0; }
+  .about-info .skill-bar {
+    display: block;
+    height: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background: #383038;
+    border-radius: 8px; }
+  .about-info .skill-per {
+    height: 20px;
+    background-color: #0fbcf9;
+    border-radius: 8px;
+    width: 0;
+    transition: 1s linear;
+    position: relative; }
+  .about-info .skill-per::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #000000;
+    background-color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%); }
+  .about-info .skill-per::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -192,6 +237,18 @@ main {
     grid-area: job2; }
   .about-info .job-3 {
     grid-area: job3; }
+  .about-info .skill-1 {
+    grid-area: skill1; }
+  .about-info .skill-2 {
+    grid-area: skill2; }
+  .about-info .skill-3 {
+    grid-area: skill3; }
+  .about-info .skill-4 {
+    grid-area: skill4; }
+  .about-info .skill-5 {
+    grid-area: skill5; }
+  .about-info .skill-6 {
+    grid-area: skill6; }
   .about-info .job {
     background: #515151;
     padding: 0.5rem;
