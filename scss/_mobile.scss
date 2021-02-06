@@ -1,9 +1,15 @@
 // For wide screen
 @include mediaXl {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // Desktop and laptops
 @include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // Tablets
@@ -16,6 +22,9 @@
       line-height: 1;
       margin-bottom: 1rem;
     }
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
   }
   ul.menu-nav,
   div.menu-brading {
