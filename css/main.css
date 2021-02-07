@@ -176,26 +176,131 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "skill1 skill2 skill3" "skill4 skill5 skill6" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
     border: #eece1a 3px solid; }
+  .about-info .skills {
+    grid-area: skills;
+    font-size: 1px;
+    width: 100%;
+    max-width: 60%; }
+  .about-info .skill-name {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0; }
+  .about-info .skill-bar {
+    display: block;
+    height: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background: #383038;
+    border-radius: 8px; }
+  .about-info .skill-per {
+    height: 20px;
+    background-color: #0fbcf9;
+    border-radius: 8px;
+    width: 0;
+    transition: 1s linear;
+    position: relative; }
+  .about-info .skill-per::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #000000;
+    background-color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%); }
+  .about-info .skill-per::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.2rem; }
+    font-size: 1.5rem; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
     grid-area: job2; }
   .about-info .job-3 {
     grid-area: job3; }
+  .about-info .skill-1 {
+    grid-area: skill1; }
+  .about-info .skill-2 {
+    grid-area: skill2; }
+  .about-info .skill-3 {
+    grid-area: skill3; }
+  .about-info .skill-4 {
+    grid-area: skill4; }
+  .about-info .skill-5 {
+    grid-area: skill5; }
+  .about-info .skill-6 {
+    grid-area: skill6; }
   .about-info .job {
     background: #515151;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    height: 65%;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #eece1a;
+      transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #eece1a;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #eece1a;
+    color: #000; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333; }
 
 #main-footer {
   text-align: center;
@@ -204,6 +309,14 @@ main {
   color: #fff;
   height: 60px; }
 
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
@@ -211,6 +324,8 @@ main {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); }
   ul.menu-nav,
   div.menu-brading {
     float: none;
