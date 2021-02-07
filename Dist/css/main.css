@@ -185,10 +185,9 @@ main {
     border: #eece1a 3px solid; }
   .about-info .skills {
     grid-area: skills;
-    font-size: 1rem;
+    font-size: 1px;
     width: 100%;
-    max-width: 600px;
-    padding: 0 20px; }
+    max-width: 60%; }
   .about-info .skill-name {
     font-size: 18px;
     font-weight: 700;

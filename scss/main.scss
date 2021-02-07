@@ -113,10 +113,9 @@ main {
 
   .skills {
     grid-area: skills;
-    font-size: 1rem;
+    font-size: 1px;
     width: 100%;
-    max-width: 600px;
-    padding: 0 20px;
+    max-width: 60%;
   }
 
   .skill-name {
