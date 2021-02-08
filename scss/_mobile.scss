@@ -1,18 +1,17 @@
-// For wide screen
 @include mediaXl {
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-// Desktop and laptops
+// Desktops & Laptops
 @include mediaLg {
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-// Tablets
+// Tablets & Small Laptops
 @include mediaMd {
   main {
     align-items: center;
@@ -23,11 +22,9 @@
       margin-bottom: 1rem;
     }
   }
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
   ul.menu-nav,
-  div.menu-brading {
+  div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0;
@@ -48,7 +45,7 @@
     transform: translate3d(100%, 0, 0);
 
     .portrait {
-      background: url("/home/sushant/portfolio/Dist/img/img17_small.png");
+      background: url("../img/img17_small.png");
       width: 150px;
       height: 150px;
     }
@@ -64,9 +61,13 @@
 
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-// Mobile phones
+// Smartphones
 @include mediaSm {
   main {
     padding: 2rem;
