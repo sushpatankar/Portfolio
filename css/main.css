@@ -176,7 +176,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "skill1 skill2 skill3" "skill4 skill5 skill6" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "skill1 skill2 skill3" "skill4 skill5 skill6" "job1 job2 job3" "job4 job5 job6";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -236,6 +236,10 @@ main {
     grid-area: job2; }
   .about-info .job-3 {
     grid-area: job3; }
+  .about-info .job-4 {
+    grid-area: job4; }
+  .about-info .job-5 {
+    grid-area: job5; }
   .about-info .skill-1 {
     grid-area: skill1; }
   .about-info .skill-2 {
@@ -252,6 +256,12 @@ main {
     background: #515151;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
+
+.contact-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "contact contact-1" "contact contact-2" "contact contact-3";
+  grid-template-columns: repeat(3, 1fr); }
 
 .projects {
   display: grid;
@@ -274,6 +284,7 @@ main {
   margin-top: 1rem; }
   .boxes div {
     font-size: 1.5rem;
+    text-align: center;
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
